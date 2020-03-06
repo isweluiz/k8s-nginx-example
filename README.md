@@ -1,23 +1,24 @@
 # k8s-nginx-example
 
-The YaML files provided in the [manifests](manifests) folder can be used to deploy
-a simple NginX stack to a given Kubernetes cluster, with a pod providing `curl`.
+The YaML files provided in the [manifests](manifests) folder can be used to
+deploy a simple `NginX` stack to a given Kubernetes cluster, with a pod
+providing `curl`.
 
 They are intended to be used for demonstration purposes on `minikube`.
 
 ## Requirements
 
-The following needs to be installed on your local workstation
+The following needs to be installed on your local workstation:
 
 * GIT
 * minikube
 
 ## Installation
 
-Clone this repository and change into it:
+Clone this repository:
 
 ```bash
-git clone https://github.com/tarak/k8s-nginx-example.git
+git clone https://github.com/tarak/k8s-nginx-example.git && \
 cd k8s-nginx-example
 ```
 
@@ -35,13 +36,13 @@ kubectl apply -R -f manifests
 
 ## Usage
 
-To view only the `nginx` pods run:
+To view only the `nginx` pods, run:
 
 ```bash
 kubectl get pods -l app=nginx
 ```
 
-To view only the `curl` pod run:
+To view only the `curl` pod, run:
 
 ```bash
 kubectl get pods -l app=curl
@@ -104,7 +105,7 @@ You will see that it changes to the names of the `nginx` pods running:
 kubectl get pods -l app=nginx
 ```
 
-## Web-browser access
+## Browser access
 
 To view the service in a web browser, get the URL of the `nginx` service from
 `minikube`:
@@ -113,7 +114,8 @@ To view the service in a web browser, get the URL of the `nginx` service from
 minikube service nginx --url
 ```
 
-Open the resulting URL in your favorite browser.
+Open the resulting URL in your favorite browser. Also use the browser's
+developer tools to see the HTTP requests and responses in the browser.
 
 ## Uninstallion
 
