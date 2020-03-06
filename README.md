@@ -10,8 +10,8 @@ They are intended to be used for demonstration purposes on `minikube`.
 
 The following needs to be installed on your local workstation:
 
-* GIT
-* minikube
+* [GIT](https://git-scm.com/downloads)
+* [minikube](https://kubernetes.io/de/docs/tasks/tools/install-minikube/)
 
 ## Installation
 
