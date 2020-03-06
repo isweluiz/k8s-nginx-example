@@ -5,9 +5,23 @@ a simple NginX stack to a given Kubernetes cluster, with a pod providing `curl`.
 
 They are intended to be used for demonstration purposes on `minikube`.
 
+## Requirements
+
+The following needs to be installed on your local workstation
+
+* GIT
+* minikube
+
 ## Installation
 
-Make sure you have configured 'minikube' as current context:
+Clone this repository and change into it:
+
+```bash
+git clone https://github.com/tarak/k8s-nginx-example.git
+cd k8s-nginx-example
+```
+
+Make sure you have configured `minikube` as current context:
 
 ```bash
 kubectl config use-context minikube
