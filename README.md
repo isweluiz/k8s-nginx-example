@@ -1,10 +1,11 @@
 # k8s-nginx-example
 
+Simple NginX and curl deployment to minikube
+
 The YaML files provided in the [manifests](manifests) folder can be used to
 deploy a simple `NginX` stack to a given Kubernetes cluster, with a pod
-providing `curl`.
-
-They are intended to be used for demonstration purposes on `minikube`.
+providing `curl`. They are intended to be used for demonstration and training
+purposes.
 
 ## Requirements
 
@@ -12,6 +13,18 @@ The following needs to be installed on your local workstation:
 
 * [GIT](https://git-scm.com/downloads)
 * [minikube](https://kubernetes.io/de/docs/tasks/tools/install-minikube/)
+
+## Content
+
+The [manifests](manifests) folder contains YaML declarations of:
+
+* Config-maps for `Nginx`:
+  - A `favicon` in form of `binaryData`
+  - A `NginX` config snippet to set a customer header for identifying pods
+  - A custom `index.html` to prove this is really happening...
+* A deployment of `NginX`, with previous items mounted from config-maps
+* A deployment of a `curl` container to test DNS and HTTP requests
+* A service to expose the `NginX` pods
 
 ## Installation
 
